@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Egor_Sort.BaseClass
 {
-    class Person
+    class Person : IComparable<Person>
     {
         public Person(string name, string lastname)
         {
@@ -16,6 +16,8 @@ namespace Egor_Sort.BaseClass
 
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
+
+        public int CompareTo(Person person) => FirstName.CompareTo(person.FirstName);
 
         public override string ToString()
         {

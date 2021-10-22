@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Egor_Sort.BaseClass
 {
-    class Auto
+    class Auto : IComparable<Auto>
     {
         public string Carname { get; private set; }
         public int Maxspeed { get; private set; }
@@ -26,5 +26,6 @@ namespace Egor_Sort.BaseClass
 
         public override string ToString() => $"{Id}\tМарка: {Carname}\tМакс. скорость: {Maxspeed}\tЦена: {Cost:C}\tСкидка: {Discount}%";
 
+        public int CompareTo(Auto auto) => Id > auto.Id ? 1 : Id < auto.Id ? -1 : 0;
     }
 }
