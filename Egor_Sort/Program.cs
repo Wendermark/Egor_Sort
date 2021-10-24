@@ -12,7 +12,13 @@ namespace Egor_Sort
     {
         static void Main()
         {
-            var autos = new Auto[] { new Auto("Toyota Corolla", 180, 300000, 5, 4), new Auto("VAZ 2114i", 160, 220000, 0, 3), new Auto("Daewoo Nexia", 140, 260000, 5, 2), new Auto("Honda Torneo", 220, 400000, 7, 1) };
+            var autos = new Auto[] 
+            { 
+                new Auto("Toyota Corolla", 180, 300000, 5, 4), 
+                new Auto("VAZ 2114i", 160, 220000, 0, 3), 
+                new Auto("Daewoo Nexia", 140, 260000, 5, 2), 
+                new Auto("Honda Torneo", 220, 400000, 7, 1) 
+            };
 
             Array.Sort(autos, new CustomComparer<Auto>(true));
 
